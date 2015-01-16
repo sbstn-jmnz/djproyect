@@ -39,11 +39,10 @@ function play2(){
 }
 function stop2(){
 	document.getElementById("audio2").pause();
+<<<<<<< HEAD
 }
 
-
-function init(){
-  var canvas = document.getElementById('myCanvas');    
+var canvas = document.getElementById('myCanvas');    
     var context = canvas.getContext('2d');
     var counter = 0
 
@@ -62,7 +61,8 @@ function init(){
       }
     }
     intervalHandler = setInterval(step, 600);
-  return false;
+=======
+	return false;
 }
 function loop2(){
 	document.getElementById("audio2").loop();
@@ -89,3 +89,4 @@ slider.slider({
     value: 35,  
 });  
 
+>>>>>>> dd02cec25516801d19fb90142751683dada77cbe
