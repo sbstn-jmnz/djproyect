@@ -11,7 +11,6 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
   <link href="css/styles.css" rel="stylesheet">
-  <script type="text/javascript" src="js/dj.js"></script>
 </head>
 <body>
 
@@ -72,12 +71,11 @@
 
                           <h3>PISTA 2 <span class="label label-default"> 
 
+                            <!-- Standard button -->
+                            <button type="button" class="btn btn-default" onclick="play2()">Play</button>
 
                             <!-- Standard button -->
-                            <button type="button" class="btn btn-default" onclick="play1()">Play</button>
-
-                            <!-- Standard button -->
-                            <button type="button" class="btn btn-default" onclick="stop1()">Stop</button>
+                            <button type="button" class="btn btn-default" onclick="stop2()">Stop</button>
                           </div>
                         </div>
                         <div class="progress">
@@ -85,8 +83,19 @@
                             <span class="sr-only">60% Complete</span>
                           </div>
                         </div>
-
+                        
+               
                         <div class="container">
+                             <div class="row">
+                             <div class="col-md-4">
+
+                                          <span class="tooltip"></span>   
+                                         <div id="slider"></div>  
+                                          <span class="volume"></span>  
+                       
+                          </div>
+                          </div>
+                          </div>
 
                          <!-- Standard button -->
                          <button type="button" class="btn btn-default" onclick="play1()">Play | Stop</button>
@@ -101,7 +110,7 @@
                  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
                  
                  <script src="js/bootstrap.min.js"></script>
-
+                 <script type="text/javascript" src="js/dj.js"></script>
                  <script type="text/javascript"> 
                   var canvas = document.getElementById('myCanvas');    
                   var context = canvas.getContext('2d');
