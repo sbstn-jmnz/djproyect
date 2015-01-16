@@ -21,6 +21,8 @@ var audio2 = document.getElementById("audio2");
 
 function play1(){
 	document.getElementById("audio1").play();
+	//var html = "";
+	//$(".progress-bar").css("width","10%")
 	return true;
 }
 function stop1(){
@@ -52,3 +54,15 @@ function playStopAll(){
 		play2();
 	}
 }
+
+$(function() {  
+    $( "#slider" ).slider();  
+});  
+
+var slider = $('#slider');  
+
+slider.slider({  
+    range: "min",  
+    value: 35,  
+});  
+
