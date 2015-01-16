@@ -24,31 +24,31 @@
 
         <div>
 
-          <audio controls>
+          <audio id="audio1">
             <source src="audios/1.mp3" type="audio/ogg">
               <source src="horse.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
               <!-- Standard button -->
-              <button type="button" class="btn btn-default">Play</button>
+              <button type="button" class="btn btn-default" onclick="play1()">Play</button>
 
               <!-- Standard button -->
-              <button type="button" class="btn btn-default">Stop</button>
+              <button type="button" class="btn btn-default" onclick="stop1()">Stop</button>
 
             </div>
 
             <div>
 
-          <audio controls>
+          <audio id="audio2">
             <source src="audios/2.mp3" type="audio/ogg">
               <source src="horse.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
               <!-- Standard button -->
-              <button type="button" class="btn btn-default">Play</button>
+              <button type="button" class="btn btn-default" onclick="play2()">Play</button>
 
               <!-- Standard button -->
-              <button type="button" class="btn btn-default">Stop</button>
+              <button type="button" class="btn btn-default" onclick="stop2()">Stop</button>
 
             </div>
 
@@ -57,6 +57,7 @@
 
           </div> <!-- /container -->
           <!-- script references -->
+          <script type="text/javascript" src="js/dj.js"></script>
           <script src="js/jquery.min.js"></script>
           <script src="js/bootstrap.min.js"></script>
         </body>
