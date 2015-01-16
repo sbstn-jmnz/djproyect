@@ -18,18 +18,11 @@
 </head>
 <body>
 <script	type="text/javascript">
-var context;
-window.addEventListener('load', init, false);
-function init() {
-  try {
-    // Fix up for prefixing
-    window.AudioContext = window.AudioContext||window.webkitAudioContext;
-    context = new AudioContext();
-  }
-  catch(e) {
-    alert('Web Audio API is not supported in this browser');
-  }
-}
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+oscillator = audioCtx.createOscillator();
+var gainNode = audioCtx.createGain();
+oscillator.connect(gainNode);
+gainNode.connect(audioCtx.destination);
 </script>
 <script src="dj.js" type="text/javascript"  ></script>
 
