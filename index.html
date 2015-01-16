@@ -15,6 +15,16 @@
     <body>
 
 
+<canvas id="myCanvas" width="1500" height="1500">
+  
+</canvas>
+
+<section id="section">
+  
+
+
+
+
       <div class="container">
         <div class="jumbotron text-center">
           <h1>DJ QUERY - Musica Fabulosa vol.1</h1>
@@ -62,11 +72,40 @@
                         <span class="sr-only">60% Complete</span>
                       </div>
                     </div>
+</section>
 
                         <!-- /container -->
                         <!-- script references -->
                         <script type="text/javascript" src="js/dj.js"></script>
                         <script src="js/jquery.min.js"></script>
                         <script src="js/bootstrap.min.js"></script>
+
+                        <script type="text/javascript"> 
+                        var canvas = document.getElementById('myCanvas');    
+                        var context = canvas.getContext('2d');
+                        var counter = 0
+
+                        function step()
+                        {
+                            counter++;
+                            for (var i = 0; i < 300; i++){
+                              for (var j = 0; j < 300; j++)  {
+                                    if ((i + j + counter) % 2 == 0) {
+                                        context.fillStyle = '#1C61FD';
+                                    } else {
+                                        context.fillStyle = '#DE2AFD';
+                                    }
+                                    context.fillRect(i * 50, j * 50, 49, 49); // X, Y, 
+                            }
+                          }
+                        }
+                        intervalHandler = setInterval(step, 600);
+
+                        </script>
+
+
+
+
+
                       </body>
                       </html>
