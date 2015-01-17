@@ -33,7 +33,7 @@
     width: 25px;  
     height: 25px;  
     cursor: pointer;  
-    background: url('../img/circulo.png') no-repeat 50% 50%;  
+    background: url('../img/circulo2.png') no-repeat 50% 50%;  
     font-weight: bold;  
     color: #1C94C4;  
     outline: none;  
@@ -47,6 +47,15 @@
     top: 0;  
     height: 100%;  
     border-radius: 25px;  
+}  
+.volume {  
+    display: inline-block;  
+    width: 25px;  
+    height: 25px;  
+    rightright: -5px;  
+    background: url('../images/volume.png') no-repeat 0 -50px;  
+    position: absolute;  
+    margin-top: -5px;  
 }     
 
 .container {
