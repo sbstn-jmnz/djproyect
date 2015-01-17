@@ -115,7 +115,8 @@ $(function() {
             var value = slider.slider('value'),  
                 volume = $('.volume'); 
 
-
+            var value2 = value/100;
+            audio1.volume = value2;
 
             tooltip.css('left', value).text(ui.value);  
   
