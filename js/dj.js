@@ -75,6 +75,8 @@ function init(){
         }
       }
     }
+    
+
     intervalHandler = setInterval(step, 600);
   return false;
 }
@@ -98,6 +100,10 @@ $(function() {
   
     var slider = $('#slider'),  
         tooltip = $('.tooltip');  
+    var slider2 = $('#slider2'),  
+        tooltip = $('.tooltip');
+    var slider3 = $('#slider3'),  
+        tooltip = $('.tooltip');    
   
     tooltip.hide();  
   
@@ -138,6 +144,85 @@ $(function() {
         stop: function(event,ui) {  
           tooltip.fadeOut('fast');  
         },  
-    });  
+    });
+
+    slider2.slider({  
+        range: "min",  
+        min: 1,  
+        value: 35,  
+  
+        start: function(event,ui) {  
+          tooltip.fadeIn('fast');  
+        },  
+  
+        slide: function(event, ui) {  
+  
+            var value3 = slider2.slider('value'),  
+                volume2 = $('.volume'); 
+
+            var value4 = value3/100;
+            audio2.volume = value4;
+
+            tooltip.css('left', value4).text(ui.value);  
+  
+            if(value4 <= 5) {   
+                volume2.css('background-position', '0 0');  
+            }   
+            else if (value4 <= 25) {  
+                volume2.css('background-position', '0 -25px');  
+            }   
+            else if (value4 <= 75) {  
+                volume2.css('background-position', '0 -50px');  
+            }   
+            else {  
+                volume2.css('background-position', '0 -75px');  
+            };  
+  
+        },  
+  
+        stop: function(event,ui) {  
+          tooltip.fadeOut('fast');  
+        },  
+    }); 
+
+    slider3.slider({  
+        range: "min",  
+        min: 1,  
+        value: 35,  
+  
+        start: function(event,ui) {  
+          tooltip.fadeIn('fast');  
+        },  
+  
+        slide: function(event, ui) {  
+  
+            var value5 = slider3.slider('value'),  
+                volume3 = $('.volume'); 
+
+            var value6 = value5/100;
+            audio1.volume = value6;
+            audio2.volume = value6;
+
+            tooltip.css('left', value6).text(ui.value);  
+  
+            if(value6 <= 5) {   
+                volume3.css('background-position', '0 0');  
+            }   
+            else if (value6 <= 25) {  
+                volume3.css('background-position', '0 -25px');  
+            }   
+            else if (value6 <= 75) {  
+                volume3.css('background-position', '0 -50px');  
+            }   
+            else {  
+                volume3.css('background-position', '0 -75px');  
+            };  
+  
+        },  
+  
+        stop: function(event,ui) {  
+          tooltip.fadeOut('fast');  
+        },  
+    });    
   
 });  
