@@ -141,7 +141,7 @@ $(function() {
   
             var value3 = slider2.slider('value'),  
                 volume2 = $('.volume'); 
-
+            //Se divide pq html va de 0 a 1    
             var value4 = value3/100;
             audio2.volume = value4;
 
