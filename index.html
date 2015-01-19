@@ -13,28 +13,16 @@
       <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
-
-
-      <canvas id="myCanvas" width="1500" height="1500">
-
-      </canvas>
-
+      <canvas id="myCanvas" width="1500" height="1500"></canvas>
       <canvas id="miCanvas2" width="100" height="500"></canvas>
-
       <section id="section">
-
-      <div id="girlImage">
-        <img src="img/play1_1.png">
-      </div>
-
-
-
+        <div id="girlImage">
+          <img src="img/play1_1.png">
+        </div>
         <div class="container">
           <div class="jumbotron text-center">
             <h1>DJ QUERY - Musica Fabulosa vol.1</h1>
             <p class="lead">PONTE EN  ESTADO  ¡MAMBO¡</p>
-            
-
             <div class="row">
               <div class="col-md-4">
                 <audio id="audio1">
@@ -42,38 +30,37 @@
                     <source src="horse.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
                     </audio>
-
-                    <h3>PISTA 1 <span class="label label-default"> 
-
+                    <h3>PISTA 1<span class="label label-default"> 
                       <!-- Standard button -->
-                      <button type="button" class="btn btn-default" onclick="play1(false)">Play</button>
-
+                     <button type="button" class="btn btn-default" onclick="play1(false)">Play</button>
                       <!-- Standard button -->
                       <button type="button" class="btn btn-default" onclick="stop1(true)">Stop</button>
                     </div>
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-default" onclick="tocarBombo()">Bombo</button>
                   </div>
-                  
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                      <span class="sr-only">60% Complete</span>
-                    </div>
-              
-                  
-                  
+                  <div class="col-md-4">
+                      <button type="button" class="btn btn-default" onclick="tocarCaja()">Caja</button>
+                  </div>
+                  <div class="col-md-4">
+                      <button type="button" class="btn btn-default" onclick="tocarHats()">Hi-Hats</button>
+                  </div>
+                  <div class="col-md-4">
+                      <button type="button" class="btn btn-default" onclick="tocarTom()">Toms</button>
+                  </div>
+                </div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                  <span class="sr-only">60% Complete</span>
+                  </div>           
                   <div class="container">
                    <div class="row">
                      <div class="col-md-4">
-
                       <span class="tooltip"></span>   
                       <div id="slider"></div>  
-                      <span class="volume"></span>  
-                      
+                     <span class="volume"></span>  
                     </div>
                   </div>
                 </div>
-
-
-
-
                 <div class="row">
                   <div class="col-md-4">
                     <audio id="audio2">
@@ -81,31 +68,22 @@
                         <source src="horse.mp3" type="audio/mpeg">
                           Your browser does not support the audio element.
                         </audio>
-
                         <h3>PISTA 2 <span class="label label-default"> 
-
                           <!-- Standard button -->
                           <button type="button" class="btn btn-default" onclick="play2(false)">Play</button>
-
                           <!-- Standard button -->
                           <button type="button" class="btn btn-default" onclick="stop2(true)">Stop</button>
                         </div>
                       </div>
-                
-                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                  
-                      
-                      
-                      <div class="container">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                      </div>
+                     <div class="container">
                        <div class="row">
-                         <div class="col-md-4">
-
+                        <div class="col-md-4">
                           <span class="tooltip"></span>   
                           <div id="slider2"></div>  
-                          <span class="volume"></span>  
-                          
+                         <span class="volume"></span>  
                         </div>
                       </div>
                     </div>
@@ -113,32 +91,24 @@
                     <!-- Standard button -->
                     <button type="button" class="btn btn-default" onclick="playStopAll()">Play | Stop</button>
                   </span></h3>
-                  <span class="tooltip"></span>   
-
+                 <span class="tooltip"></span>   
                   <div class="container">
                    <div class="row">
-                     <div class="col-md-4">
-
+                    <div class="col-md-4">
                       <span class="tooltip"></span>   
                       <div id="slider3"></div>  
                       <span class="volume"></span> 
                     </div>
                   </div>
                 </div>
-                
-
-              </div>
-
-
-              
-
+               </div>
               <!-- /container -->
               <!-- script references -->
               <script src="js/jquery.min.js"></script>
               <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-              
               <script src="js/bootstrap.min.js"></script>
               <script type="text/javascript" src="js/dj.js"></script>
-              <script type="text/javascript" src="js/canvas.js"> </script>
-</body>
-</html>
+              <script type="text/javascript" src="js/canvas.js"></script>
+              <script type="text/javascript" src="js/drums.js"> </script>
+            </body>
+            </html>

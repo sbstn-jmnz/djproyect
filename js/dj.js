@@ -1,21 +1,3 @@
-var dogBarkingBuffer = null;
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-var context = new AudioContext();
-
-function loadSound(url) {
-  var request = new XMLHttpRequest();
-  request.open('GET', url, true);
-  request.responseType = 'arraybuffer';
-
-  // Decode asynchronously
-  request.onload = function() {
-    context.decodeAudioData(request.response, function(buffer) {
-      dogBarkingBuffer = buffer;
-    }, onError);
-  }
-  request.send();
-}
-
 var numero = false;
 var audio1 = document.getElementById("audio1");
 var audio2 = document.getElementById("audio2");
