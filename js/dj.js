@@ -208,3 +208,18 @@ $(function() {
     });    
   
 });  
+
+/////////Aqui es donde bailan las chiquillas////////////////
+var html = "";
+var j = 1;
+
+function bailar(){
+  html = "<img src='img/play1_"+j+".png'>";
+  $("#girlImage").html(html);
+  j++;
+  if(j>5){
+    j=1;
+  }
+}
+
+intervalHandler = setInterval(bailar, 250);
