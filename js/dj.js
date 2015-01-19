@@ -71,10 +71,14 @@ function playStopAll(){
     stop1(true);
     stop2(true);
     numero = false;
+    clearInterval(intervalHandler);
+    clearInterval(intervalHandler2);
   }else{
     play1(false);
     play2(false);
     numero = true;
+    intervalHandler = setInterval(bailar, 250);
+    intervalHandler2 = setInterval(bailar2, 250);
   }
 }
 ////////////Slider/////////////////
@@ -214,7 +218,7 @@ var html = "";
 var j = 1;
 
 function bailar(){
-  html = "<img src='img/play1_"+j+".png'>";
+  html = "<img src='img/play1_"+j+".png' class='img-responsive'>";
   $("#girlImage").html(html);
   j++;
   if(j>5){
@@ -223,7 +227,7 @@ function bailar(){
 }
 
 function bailar2(){
-  html = "<img src='img/play2_"+j+".png'>";
+  html = "<img src='img/play2_"+j+".png' class='img-responsive'>";
   $("#girlImage2").html(html);
   j++;
   if(j>5){
@@ -231,5 +235,3 @@ function bailar2(){
   }
 }
 
-intervalHandler = setInterval(bailar, 250);
-intervalHandler = setInterval(bailar2, 250);
