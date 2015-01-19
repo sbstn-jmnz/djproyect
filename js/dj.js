@@ -222,4 +222,14 @@ function bailar(){
   }
 }
 
+function bailar2(){
+  html = "<img src='img/play2_"+j+".png'>";
+  $("#girlImage2").html(html);
+  j++;
+  if(j>5){
+    j=1;
+  }
+}
+
 intervalHandler = setInterval(bailar, 250);
+intervalHandler = setInterval(bailar2, 250);

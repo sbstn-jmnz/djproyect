@@ -2,6 +2,11 @@
   float:left;
   padding-left: 100px;
 }
+#girlImage2{
+  float:left;
+  padding-left: 100px;
+  padding-right: 50px;
+}
 
 #slider{  
     border-width: 1px;  
@@ -92,8 +97,10 @@
 }     
 
 .container {
+  float:left;
   margin: 0 auto;
   max-width: 960px;
+  padding-left: 100px;
 }
 @import url("//fonts.googleapis.com/css?family=Roboto:400,700");
 /*!
